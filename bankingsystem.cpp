@@ -6,11 +6,16 @@ using namespace std;
 class Account {
   public:
 
-    Account(int account_number, string first_name, string last_name, double balance){
-        account_number = account_number;
-        first_name = first_name;
-        last_name = last_name;
-        balance = balance;
+    int account_number;
+    string first_name;
+    string last_name;
+    double balance;
+
+    Account(int _account_number, string _first_name, string _last_name, double _balance){
+        account_number = _account_number;
+        first_name = _first_name;
+        last_name = _last_name;
+        balance = _balance;
     };
 };
 
@@ -45,9 +50,15 @@ void addRecord() {
 
 };
 
+void showRecords() {
+    for(int i = 0; i < arr.size(); ++i) {
+      cout << arr[i].account_number << endl;
+    }
+}
+
 int main()
 {
     addRecord();
-    addRecord();
+    showRecords();
     return 0;
 }
