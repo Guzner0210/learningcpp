@@ -81,6 +81,14 @@ void editRecord(Account& account) {
   }
 }
 
+void deleteRecord(Account& account) {
+  for(int i = 0; i < arr.size(); ++i) {
+    if (arr[i].account_number == account.account_number) {
+      arr.erase(arr.begin()+i);
+    }
+  }
+}
+
 void searchRecord() {
     int account_number;
     cout << "Enter your account number: ";
@@ -100,6 +108,12 @@ void searchRecord() {
         editRecord(arr[i]);
       } else {
         //delete record
+        cout << "Do you want to delete this record? [y/n]" << endl;
+        string ans;
+        cin >> ans;
+        if (ans == "y") {
+          deleteRecord(arr[i]);
+        }
       }
     } else {
 
