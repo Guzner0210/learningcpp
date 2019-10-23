@@ -56,7 +56,7 @@ void showRecords() {
     }
 }
 
-void editRecord(Account account) {
+void editRecord(Account& account) {
   cout << "Choose what you want to edit: " << endl;
   cout << "1> First name" << endl;
   cout << "2> Last name" << endl;
