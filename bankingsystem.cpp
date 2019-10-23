@@ -127,9 +127,7 @@ void decide() {
   cout << "1> Add Record" << endl;
   cout << "2> Show Records" << endl;
   cout << "3> Search Record" << endl;
-  cout << "4> Edit Record" << endl;
-  cout << "5> Delete Record" << endl;
-  cout << "6> Exit Program" << endl;
+  cout << "4> Exit Program" << endl;
   cout << "" << endl;
   cout << "" << endl;
   cin >> choice;
