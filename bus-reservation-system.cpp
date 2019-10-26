@@ -39,11 +39,21 @@ void install() {
   cout << "To: " << arr[bus_no-1].to << endl;
 }
 
+void buses_available() {
+  for (int i = 0; i < arr.size(); i++) {
+    cout << "Bus driver: " << arr[i].bus_driver << endl;
+    cout << "Arrival time: " << arr[i].arrival_time << endl;
+    cout << "Departure: " << arr[i].departure << endl;
+    cout << "From: " << arr[i].from << endl;
+    cout << "To: " << arr[i].to << endl;
+  }
+}
+
 int main()
 {
   arr.push_back(bus_1);
   arr.push_back(bus_2);
   arr.push_back(bus_3);
-  install();
+  buses_available();
   return 0;
 }
