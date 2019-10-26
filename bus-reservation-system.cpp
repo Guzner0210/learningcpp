@@ -19,10 +19,31 @@ class Bus {
     departure = _departure;
     from = _from;
     to = _to;
-  }
+  };
+};
+
+vector<Bus> arr;
+
+Bus bus_1 = Bus(1, "Toni Bui", "10:00", "3:00", "London", "Manchester City");
+Bus bus_2 = Bus(2, "Gerrard", "10:00", "3:00", "Liverpool", "Manchester City");
+Bus bus_3 = Bus(3, "Lampard", "10:00", "3:00", "Westminster", "Manchester City");
+
+void install() {
+  int bus_no;
+  cout << "Enter bus number: ";
+  cin >> bus_no;
+  cout << "Bus driver: " << arr[bus_no-1].bus_driver << endl;
+  cout << "Arrival time: " << arr[bus_no-1].arrival_time << endl;
+  cout << "Departure: " << arr[bus_no-1].departure << endl;
+  cout << "From: " << arr[bus_no-1].from << endl;
+  cout << "To: " << arr[bus_no-1].to << endl;
 }
 
 int main()
 {
-    return 0;
+  arr.push_back(bus_1);
+  arr.push_back(bus_2);
+  arr.push_back(bus_3);
+  install();
+  return 0;
 }
